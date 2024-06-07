@@ -50,7 +50,7 @@ const Signup = ({navigation, e}: any) => {
       confirmPasswordVerify
     ) {
       axios
-        .post('http://192.168.1.21:5001/signup', userData)
+        .post('http://192.168.1.18:5001/signup', userData)
         .then(res => {
           console.log(res.data);
           if (res.data.status == 'ok') {
@@ -66,18 +66,15 @@ const Signup = ({navigation, e}: any) => {
   };
 
   const handleEmail = (emailVar: any) => {
-    // const emailVar = e.nativeEvent.text;
     setEmail(emailVar);
     setEmailVerify(false);
     if (/^[\w.%+-]+@[\w.-]+\.[a-zA-Z]{3,}$/.test(emailVar)) {
       setEmail(emailVar);
       setEmailVerify(true);
     }
-    // console.log(e.nativeEvent.text);
   };
 
   const handleMobile = (mobileVar: any) => {
-    // const mobileVar = e.nativeEvent.text;
     setMobile(mobileVar);
     setMobileVerify(false);
     if (/^(0\d{9})$/.test(mobileVar) || /^\d{9}$/.test(mobileVar)) {
@@ -87,7 +84,6 @@ const Signup = ({navigation, e}: any) => {
   };
 
   const handlePassword = (passwordVar: any) => {
-    // const passwordVar = e.nativeEvent.text;
     setPassword(passwordVar);
     setPasswordVerify(false);
     if (
@@ -101,7 +97,6 @@ const Signup = ({navigation, e}: any) => {
   };
 
   const handleConfirmPassword = (confirmPasswordVar: any) => {
-    // const confirmPasswordVar = e.nativeEvent.text;
     setConfirmPassword(confirmPasswordVar);
     setConfirmPasswordVerify(false);
     if (password === confirmPasswordVar) {

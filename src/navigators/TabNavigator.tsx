@@ -53,8 +53,8 @@ const TabNavigator = () => {
         options={{
           tabBarIcon: ({focused, color, size}) => (
             <CustomIcon
-              name="search"
-              size={28}
+              name="cart"
+              size={32}
               color={
                 focused ? COLORS.primaryWhiteHex : COLORS.primaryLightGreyHex
               }
@@ -125,14 +125,7 @@ const TabNavigator = () => {
 
 const styles = StyleSheet.create({
   tabBarStyle: {
-    // height: 72,
-    // position: 'absolute',
-    // backgroundColor: COLORS.primarySpringGreenHex,
-    // marginHorizontal: SPACING.space_20,
-    // marginBottom: SPACING.space_30,
-    // borderRadius: BORDERRADIUS.radius_25,
-    // paddingBottom: SPACING.space_4,
-    height: 72,
+    height: 68,
     position: 'absolute',
     backgroundColor: COLORS.primarySpringGreenHex,
     borderTopWidth: 0,

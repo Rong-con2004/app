@@ -32,7 +32,7 @@ const Login = ({navigation}: any) => {
       phone_number: mobile,
       password: password,
     };
-    axios.post('http://192.168.1.21:5001/login', userData).then(res => {
+    axios.post('http://192.168.1.18:5001/login', userData).then(res => {
       console.log(res.data);
       if (res.data.status == 'ok') {
         navigation.navigate('Tab');
